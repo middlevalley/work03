@@ -38,13 +38,23 @@ public class SampleAuthConfiguration {
         .password("$2y$10$ngxCDmuVK1TaGchiYQfJ1OAKkd64IH6skGsNw1sLabrTICOHPxC0e")
         .roles("USER")
         .build();
+    UserDetails user3 = users
+        .username("user3")
+        .password("$2y$10$XnU3VQjuRBbR51eb88GtCum4f.VWFGFsIMWD/zyE2GLZ05enwfX0q")
+        .roles("USER")
+        .build();
+    UserDetails user4 = users
+        .username("user4")
+        .password("$2y$10$7RBVXe/wyE/EfxrjRFZvm.4t9MMCvRBhLhHTmNJcedg07s5C736pW")
+        .roles("ADMIN")
+        .build();
     UserDetails admin = users
         .username("admin")
         .password("$2y$10$ngxCDmuVK1TaGchiYQfJ1OAKkd64IH6skGsNw1sLabrTICOHPxC0e")
         .roles("ADMIN")
         .build();
     // 生成したユーザをImMemoryUserDetailsManagerに渡す（いくつでも良い）
-    return new InMemoryUserDetailsManager(user1, user2, admin);
+    return new InMemoryUserDetailsManager(user1, user2, user3, user4, admin);
   }
 
   /**
