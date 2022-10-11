@@ -52,15 +52,15 @@ public class Sample31Controller {
     String loginUser = prin.getName(); // ログインユーザ情報
     model.addAttribute("login_user", loginUser);
     return "sample31.html";
-  } /*
-     * @PostMapping("step6")
-     * public String sample36(@RequestParam Integer hiku1, @RequestParam Integer
-     * hiku2, ModelMap model) {
-     * int kekka = hiku1 - hiku2;
-     * model.addAttribute("hikukekka", kekka);
-     * return "sample33.html";
-     * }
-     *
+  }
+      @PostMapping("step6")
+      public String sample36(@RequestParam Integer hiku1, @RequestParam Integer
+      hiku2, ModelMap model) {
+      int kekka = hiku1 - hiku2;
+      model.addAttribute("hikukekka", kekka);
+      return "sample33.html";
+      }
+     /*
      * @GetMapping("step8")
      * public String sample38(Principal prin, ModelMap model) {
      * String loginUser = prin.getName();
